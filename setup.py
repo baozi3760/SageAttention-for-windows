@@ -52,13 +52,13 @@ if not SKIP_CUDA_BUILD:
     if is_msvc:
         # MSVC-compatible flags
         CXX_FLAGS = [
-            "/O2", "/std:c++17", "/openmp", "/EHsc", "/DNOMINMAX",
+            "/O2", "/std:c++20", "/openmp", "/EHsc", "/DNOMINMAX",
             "/D_ENABLE_EXTENDED_ALIGNED_STORAGE", "/MP", "/permissive-", "/Zc:__cplusplus",
             "/D_WIN32", "/DUSE_CUDA",
         ]
         NVCC_FLAGS = [
             "-O3",
-            "-std=c++17",
+            "-std=c++20",
             "-U__CUDA_NO_HALF_OPERATORS__",
             "-U__CUDA_NO_HALF_CONVERSIONS__",
             "--use_fast_math",
