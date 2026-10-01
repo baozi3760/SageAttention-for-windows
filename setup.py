@@ -25,7 +25,7 @@ from setuptools import setup, find_packages
 
 # Skip CUDA build in CI or when explicitly requested
 SKIP_CUDA_BUILD = (
-    os.getenv("SAGEATTN_SKIP_CUDA_BUILD", "0").upper() in {"1", "TRUE", "YES"}
+    os.getenv("SKIP_CUDA_BUILD", "0").upper() in {"1", "TRUE", "YES"}
     or ("sdist" in sys.argv)
 )
 
